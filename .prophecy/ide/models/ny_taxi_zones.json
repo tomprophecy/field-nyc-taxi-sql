@@ -1,0 +1,1638 @@
+{
+  "id" : "ny_taxi_zones",
+  "metainfo" : {
+    "label" : "ny_taxi_zones",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "Qf6BuQASHy380lKiy5yq9$$m3xvH0uN8i7Wi2Lx1e-tP" : {
+      "id" : "Qf6BuQASHy380lKiy5yq9$$m3xvH0uN8i7Wi2Lx1e-tP",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "taxi_data_with_zones_and_do_zones",
+        "slug" : "taxi_data_with_zones_and_do_zones",
+        "x" : -100,
+        "y" : -60,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Combines taxi trip data with pickup and drop-off zone information for further analysis.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "in0.DOLocationID = in1.LocationID"
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in0.VendorID"
+          },
+          "alias" : "VendorID"
+        }, {
+          "expression" : {
+            "expression" : "in0.pickup_datetime"
+          },
+          "alias" : "pickup_datetime"
+        }, {
+          "expression" : {
+            "expression" : "in0.dropoff_datetime"
+          },
+          "alias" : "dropoff_datetime"
+        }, {
+          "expression" : {
+            "expression" : "in0.passenger_count"
+          },
+          "alias" : "passenger_count"
+        }, {
+          "expression" : {
+            "expression" : "in0.trip_distance"
+          },
+          "alias" : "trip_distance"
+        }, {
+          "expression" : {
+            "expression" : "in0.RatecodeID"
+          },
+          "alias" : "RatecodeID"
+        }, {
+          "expression" : {
+            "expression" : "in0.store_and_fwd_flag"
+          },
+          "alias" : "store_and_fwd_flag"
+        }, {
+          "expression" : {
+            "expression" : "in0.PULocationID"
+          },
+          "alias" : "PULocationID"
+        }, {
+          "expression" : {
+            "expression" : "in0.PUBorough"
+          },
+          "alias" : "PUBorough"
+        }, {
+          "expression" : {
+            "expression" : "in0.PUZone"
+          },
+          "alias" : "PUZone"
+        }, {
+          "expression" : {
+            "expression" : "in0.PUservice_zone"
+          },
+          "alias" : "PUservice_zone"
+        }, {
+          "expression" : {
+            "expression" : "in0.DOLocationID"
+          },
+          "alias" : "DOLocationID"
+        }, {
+          "expression" : {
+            "expression" : "in1.Borough"
+          },
+          "alias" : "DOBorough"
+        }, {
+          "expression" : {
+            "expression" : "in1.Zone"
+          },
+          "alias" : "DOZone"
+        }, {
+          "expression" : {
+            "expression" : "in1.service_zone"
+          },
+          "alias" : "DOservice_zone"
+        }, {
+          "expression" : {
+            "expression" : "in0.payment_type"
+          },
+          "alias" : "payment_type"
+        }, {
+          "expression" : {
+            "expression" : "in0.fare_amount"
+          },
+          "alias" : "fare_amount"
+        }, {
+          "expression" : {
+            "expression" : "in0.extra"
+          },
+          "alias" : "extra"
+        }, {
+          "expression" : {
+            "expression" : "in0.mta_tax"
+          },
+          "alias" : "mta_tax"
+        }, {
+          "expression" : {
+            "expression" : "in0.tip_amount"
+          },
+          "alias" : "tip_amount"
+        }, {
+          "expression" : {
+            "expression" : "in0.tolls_amount"
+          },
+          "alias" : "tolls_amount"
+        }, {
+          "expression" : {
+            "expression" : "in0.improvement_surcharge"
+          },
+          "alias" : "improvement_surcharge"
+        }, {
+          "expression" : {
+            "expression" : "in0.total_amount"
+          },
+          "alias" : "total_amount"
+        }, {
+          "expression" : {
+            "expression" : "in0.congestion_surcharge"
+          },
+          "alias" : "congestion_surcharge"
+        }, {
+          "expression" : {
+            "expression" : "in0.taxi_type"
+          },
+          "alias" : "taxi_type"
+        }, {
+          "expression" : {
+            "expression" : "in0.year"
+          },
+          "alias" : "year"
+        }, {
+          "expression" : {
+            "expression" : "in0.month"
+          },
+          "alias" : "month"
+        }, {
+          "expression" : {
+            "expression" : "in0.pickup_date"
+          },
+          "alias" : "pickup_date"
+        }, {
+          "expression" : {
+            "expression" : "in0.dropoff_date"
+          },
+          "alias" : "dropoff_date"
+        } ],
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "ryMexHEGH_BymNc9rFLy6$$FQt6-OQfzJE1ApfX435_Z##DOLocationID", "9wzIoLb1zw88PcCgFjc4A$$QsC0LUgOg8yINdMtzl1kq##LocationID", "ryMexHEGH_BymNc9rFLy6$$FQt6-OQfzJE1ApfX435_Z##VendorID", "ryMexHEGH_BymNc9rFLy6$$FQt6-OQfzJE1ApfX435_Z##pickup_datetime", "ryMexHEGH_BymNc9rFLy6$$FQt6-OQfzJE1ApfX435_Z##dropoff_datetime", "ryMexHEGH_BymNc9rFLy6$$FQt6-OQfzJE1ApfX435_Z##passenger_count", "ryMexHEGH_BymNc9rFLy6$$FQt6-OQfzJE1ApfX435_Z##trip_distance", "ryMexHEGH_BymNc9rFLy6$$FQt6-OQfzJE1ApfX435_Z##RatecodeID", "ryMexHEGH_BymNc9rFLy6$$FQt6-OQfzJE1ApfX435_Z##store_and_fwd_flag", "ryMexHEGH_BymNc9rFLy6$$FQt6-OQfzJE1ApfX435_Z##PULocationID", "ryMexHEGH_BymNc9rFLy6$$FQt6-OQfzJE1ApfX435_Z##PUBorough", "ryMexHEGH_BymNc9rFLy6$$FQt6-OQfzJE1ApfX435_Z##PUZone", "ryMexHEGH_BymNc9rFLy6$$FQt6-OQfzJE1ApfX435_Z##PUservice_zone", "ryMexHEGH_BymNc9rFLy6$$FQt6-OQfzJE1ApfX435_Z##DOLocationID", "9wzIoLb1zw88PcCgFjc4A$$QsC0LUgOg8yINdMtzl1kq##Borough", "9wzIoLb1zw88PcCgFjc4A$$QsC0LUgOg8yINdMtzl1kq##Zone", "9wzIoLb1zw88PcCgFjc4A$$QsC0LUgOg8yINdMtzl1kq##service_zone", "ryMexHEGH_BymNc9rFLy6$$FQt6-OQfzJE1ApfX435_Z##payment_type", "ryMexHEGH_BymNc9rFLy6$$FQt6-OQfzJE1ApfX435_Z##fare_amount", "ryMexHEGH_BymNc9rFLy6$$FQt6-OQfzJE1ApfX435_Z##extra", "ryMexHEGH_BymNc9rFLy6$$FQt6-OQfzJE1ApfX435_Z##mta_tax", "ryMexHEGH_BymNc9rFLy6$$FQt6-OQfzJE1ApfX435_Z##tip_amount", "ryMexHEGH_BymNc9rFLy6$$FQt6-OQfzJE1ApfX435_Z##tolls_amount", "ryMexHEGH_BymNc9rFLy6$$FQt6-OQfzJE1ApfX435_Z##improvement_surcharge", "ryMexHEGH_BymNc9rFLy6$$FQt6-OQfzJE1ApfX435_Z##total_amount", "ryMexHEGH_BymNc9rFLy6$$FQt6-OQfzJE1ApfX435_Z##congestion_surcharge", "ryMexHEGH_BymNc9rFLy6$$FQt6-OQfzJE1ApfX435_Z##taxi_type", "ryMexHEGH_BymNc9rFLy6$$FQt6-OQfzJE1ApfX435_Z##year", "ryMexHEGH_BymNc9rFLy6$$FQt6-OQfzJE1ApfX435_Z##month", "ryMexHEGH_BymNc9rFLy6$$FQt6-OQfzJE1ApfX435_Z##pickup_date", "ryMexHEGH_BymNc9rFLy6$$FQt6-OQfzJE1ApfX435_Z##dropoff_date" ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ryMexHEGH_BymNc9rFLy6$$FQt6-OQfzJE1ApfX435_Z",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "VendorID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "pickup_datetime",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "dropoff_datetime",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "passenger_count",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "trip_distance",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "RatecodeID",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "store_and_fwd_flag",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PULocationID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "PUBorough",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PUZone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PUservice_zone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DOLocationID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "payment_type",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "fare_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "extra",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "mta_tax",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "tip_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "tolls_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "improvement_surcharge",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "total_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "congestion_surcharge",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "taxi_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "year",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "month",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "pickup_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "dropoff_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "LocationID",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "Borough",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Zone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "service_zone",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        }, {
+          "id" : "9wzIoLb1zw88PcCgFjc4A$$QsC0LUgOg8yINdMtzl1kq",
+          "schema" : {
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "LocationID",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Borough",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Zone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "service_zone",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "5IHzassn3OZvcrcNyL7Em$$DHZe3CQ-x3Yz4tWT56HmG",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "VendorID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "pickup_datetime",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "dropoff_datetime",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "passenger_count",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "trip_distance",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "RatecodeID",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "store_and_fwd_flag",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PULocationID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "PUBorough",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PUZone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PUservice_zone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DOLocationID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "DOBorough",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DOZone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DOservice_zone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "payment_type",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "fare_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "extra",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "mta_tax",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "tip_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "tolls_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "improvement_surcharge",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "total_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "congestion_surcharge",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "taxi_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "year",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "month",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "pickup_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "dropoff_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "ny_taxi_zones##sxq0UpxO" : {
+      "id" : "ny_taxi_zones##sxq0UpxO",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "ny_taxi_zones",
+        "x" : 60,
+        "y" : -60,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Creates a table of New York taxi zones with associated data.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM taxi_data_with_zones_and_do_zones\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "BBQaw2vc",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "VendorID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "pickup_datetime",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "dropoff_datetime",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "passenger_count",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "trip_distance",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "RatecodeID",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "store_and_fwd_flag",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PULocationID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "PUBorough",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PUZone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PUservice_zone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DOLocationID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "DOBorough",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DOZone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DOservice_zone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "payment_type",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "fare_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "extra",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "mta_tax",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "tip_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "tolls_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "improvement_surcharge",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "total_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "congestion_surcharge",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "taxi_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "year",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "month",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "pickup_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "dropoff_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            } ]
+          },
+          "slug" : "taxi_data_with_zones_and_do_zones"
+        } ],
+        "outputs" : [ {
+          "id" : "SYoissYW",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "VendorID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "pickup_datetime",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "dropoff_datetime",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "passenger_count",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "trip_distance",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "RatecodeID",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "store_and_fwd_flag",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PULocationID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "PUBorough",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PUZone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PUservice_zone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DOLocationID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "DOBorough",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DOZone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DOservice_zone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "payment_type",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "fare_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "extra",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "mta_tax",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "tip_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "tolls_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "improvement_surcharge",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "total_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "congestion_surcharge",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "taxi_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "year",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "month",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "pickup_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "dropoff_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "FrmlOZ5i-L69choLKSDGb" : {
+      "id" : "FrmlOZ5i-L69choLKSDGb",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "pu_zones",
+        "slug" : "pu_zones",
+        "x" : -440,
+        "y" : -60,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "zones",
+          "sourceType" : "Source",
+          "sourceName" : "tom.ny_taxi",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "D3FosJ5slLA87xijEBmiX",
+          "schema" : {
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "LocationID",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Borough",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Zone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "service_zone",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "PxMPUduLhP1q6CU_fW261$$9dTx2eBL1jFUPqSFusswH" : {
+      "id" : "PxMPUduLhP1q6CU_fW261$$9dTx2eBL1jFUPqSFusswH",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "taxi_data_with_zones",
+        "slug" : "taxi_data_with_zones",
+        "x" : -280,
+        "y" : -120,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Combines taxi trip data with corresponding pickup zone information for analysis and reporting.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "in0.PULocationID = in1.LocationID"
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in0.VendorID"
+          },
+          "alias" : "VendorID"
+        }, {
+          "expression" : {
+            "expression" : "in0.pickup_datetime"
+          },
+          "alias" : "pickup_datetime"
+        }, {
+          "expression" : {
+            "expression" : "in0.dropoff_datetime"
+          },
+          "alias" : "dropoff_datetime"
+        }, {
+          "expression" : {
+            "expression" : "in0.passenger_count"
+          },
+          "alias" : "passenger_count"
+        }, {
+          "expression" : {
+            "expression" : "in0.trip_distance"
+          },
+          "alias" : "trip_distance"
+        }, {
+          "expression" : {
+            "expression" : "in0.RatecodeID"
+          },
+          "alias" : "RatecodeID"
+        }, {
+          "expression" : {
+            "expression" : "in0.store_and_fwd_flag"
+          },
+          "alias" : "store_and_fwd_flag"
+        }, {
+          "expression" : {
+            "expression" : "in0.PULocationID"
+          },
+          "alias" : "PULocationID"
+        }, {
+          "expression" : {
+            "expression" : "in1.Borough"
+          },
+          "alias" : "PUBorough"
+        }, {
+          "expression" : {
+            "expression" : "in1.Zone"
+          },
+          "alias" : "PUZone"
+        }, {
+          "expression" : {
+            "expression" : "in1.service_zone"
+          },
+          "alias" : "PUservice_zone"
+        }, {
+          "expression" : {
+            "expression" : "in0.DOLocationID"
+          },
+          "alias" : "DOLocationID"
+        }, {
+          "expression" : {
+            "expression" : "in0.payment_type"
+          },
+          "alias" : "payment_type"
+        }, {
+          "expression" : {
+            "expression" : "in0.fare_amount"
+          },
+          "alias" : "fare_amount"
+        }, {
+          "expression" : {
+            "expression" : "in0.extra"
+          },
+          "alias" : "extra"
+        }, {
+          "expression" : {
+            "expression" : "in0.mta_tax"
+          },
+          "alias" : "mta_tax"
+        }, {
+          "expression" : {
+            "expression" : "in0.tip_amount"
+          },
+          "alias" : "tip_amount"
+        }, {
+          "expression" : {
+            "expression" : "in0.tolls_amount"
+          },
+          "alias" : "tolls_amount"
+        }, {
+          "expression" : {
+            "expression" : "in0.improvement_surcharge"
+          },
+          "alias" : "improvement_surcharge"
+        }, {
+          "expression" : {
+            "expression" : "in0.total_amount"
+          },
+          "alias" : "total_amount"
+        }, {
+          "expression" : {
+            "expression" : "in0.congestion_surcharge"
+          },
+          "alias" : "congestion_surcharge"
+        }, {
+          "expression" : {
+            "expression" : "in0.taxi_type"
+          },
+          "alias" : "taxi_type"
+        }, {
+          "expression" : {
+            "expression" : "in0.year"
+          },
+          "alias" : "year"
+        }, {
+          "expression" : {
+            "expression" : "in0.month"
+          },
+          "alias" : "month"
+        }, {
+          "expression" : {
+            "expression" : "in0.pickup_date"
+          },
+          "alias" : "pickup_date"
+        }, {
+          "expression" : {
+            "expression" : "in0.dropoff_date"
+          },
+          "alias" : "dropoff_date"
+        }, {
+          "expression" : {
+            "expression" : "in1.LocationID"
+          },
+          "alias" : "LocationID"
+        }, {
+          "expression" : {
+            "expression" : "in1.Borough"
+          },
+          "alias" : "Borough"
+        }, {
+          "expression" : {
+            "expression" : "in1.Zone"
+          },
+          "alias" : "Zone"
+        }, {
+          "expression" : {
+            "expression" : "in1.service_zone"
+          },
+          "alias" : "service_zone"
+        } ],
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "c4tNd_NBPsn10KUVCqWdY$$O_ZgU3j0zZ0dquO7abnv8##PULocationID", "WN6nh5pieSnPMDKM5usWd$$johZxv-RM0enNSBRYpc9G##LocationID", "c4tNd_NBPsn10KUVCqWdY$$O_ZgU3j0zZ0dquO7abnv8##VendorID", "c4tNd_NBPsn10KUVCqWdY$$O_ZgU3j0zZ0dquO7abnv8##pickup_datetime", "c4tNd_NBPsn10KUVCqWdY$$O_ZgU3j0zZ0dquO7abnv8##dropoff_datetime", "c4tNd_NBPsn10KUVCqWdY$$O_ZgU3j0zZ0dquO7abnv8##passenger_count", "c4tNd_NBPsn10KUVCqWdY$$O_ZgU3j0zZ0dquO7abnv8##trip_distance", "c4tNd_NBPsn10KUVCqWdY$$O_ZgU3j0zZ0dquO7abnv8##RatecodeID", "c4tNd_NBPsn10KUVCqWdY$$O_ZgU3j0zZ0dquO7abnv8##store_and_fwd_flag", "c4tNd_NBPsn10KUVCqWdY$$O_ZgU3j0zZ0dquO7abnv8##PULocationID", "WN6nh5pieSnPMDKM5usWd$$johZxv-RM0enNSBRYpc9G##Borough", "WN6nh5pieSnPMDKM5usWd$$johZxv-RM0enNSBRYpc9G##Zone", "WN6nh5pieSnPMDKM5usWd$$johZxv-RM0enNSBRYpc9G##service_zone", "c4tNd_NBPsn10KUVCqWdY$$O_ZgU3j0zZ0dquO7abnv8##DOLocationID", "c4tNd_NBPsn10KUVCqWdY$$O_ZgU3j0zZ0dquO7abnv8##payment_type", "c4tNd_NBPsn10KUVCqWdY$$O_ZgU3j0zZ0dquO7abnv8##fare_amount", "c4tNd_NBPsn10KUVCqWdY$$O_ZgU3j0zZ0dquO7abnv8##extra", "c4tNd_NBPsn10KUVCqWdY$$O_ZgU3j0zZ0dquO7abnv8##mta_tax", "c4tNd_NBPsn10KUVCqWdY$$O_ZgU3j0zZ0dquO7abnv8##tip_amount", "c4tNd_NBPsn10KUVCqWdY$$O_ZgU3j0zZ0dquO7abnv8##tolls_amount", "c4tNd_NBPsn10KUVCqWdY$$O_ZgU3j0zZ0dquO7abnv8##improvement_surcharge", "c4tNd_NBPsn10KUVCqWdY$$O_ZgU3j0zZ0dquO7abnv8##total_amount", "c4tNd_NBPsn10KUVCqWdY$$O_ZgU3j0zZ0dquO7abnv8##congestion_surcharge", "c4tNd_NBPsn10KUVCqWdY$$O_ZgU3j0zZ0dquO7abnv8##taxi_type", "c4tNd_NBPsn10KUVCqWdY$$O_ZgU3j0zZ0dquO7abnv8##year", "c4tNd_NBPsn10KUVCqWdY$$O_ZgU3j0zZ0dquO7abnv8##month", "c4tNd_NBPsn10KUVCqWdY$$O_ZgU3j0zZ0dquO7abnv8##pickup_date", "c4tNd_NBPsn10KUVCqWdY$$O_ZgU3j0zZ0dquO7abnv8##dropoff_date", "WN6nh5pieSnPMDKM5usWd$$johZxv-RM0enNSBRYpc9G##LocationID" ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "c4tNd_NBPsn10KUVCqWdY$$O_ZgU3j0zZ0dquO7abnv8",
+          "schema" : {
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "VendorID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "pickup_datetime",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "dropoff_datetime",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "passenger_count",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "trip_distance",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "RatecodeID",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "store_and_fwd_flag",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PULocationID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "DOLocationID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "payment_type",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "fare_amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "extra",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "mta_tax",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "tip_amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "tolls_amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "improvement_surcharge",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "total_amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "congestion_surcharge",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "taxi_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "year",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "month",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "pickup_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "dropoff_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        }, {
+          "id" : "WN6nh5pieSnPMDKM5usWd$$johZxv-RM0enNSBRYpc9G",
+          "schema" : {
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "LocationID",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Borough",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Zone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "service_zone",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "Ncrc4S_6RaMST5d0h1T-G$$eu_-D5yfqi-WBKa0rhTNp",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "VendorID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "pickup_datetime",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "dropoff_datetime",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "passenger_count",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "trip_distance",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "RatecodeID",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "store_and_fwd_flag",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PULocationID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "PUBorough",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PUZone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PUservice_zone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DOLocationID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "payment_type",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "fare_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "extra",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "mta_tax",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "tip_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "tolls_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "improvement_surcharge",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "total_amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "congestion_surcharge",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "taxi_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "year",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "month",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "pickup_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "dropoff_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "LocationID",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "Borough",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Zone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "service_zone",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "Rhg6Wsz3Mk2pvcuS9xcCH" : {
+      "id" : "Rhg6Wsz3Mk2pvcuS9xcCH",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "combined_taxi_data",
+        "slug" : "combined_taxi_data",
+        "x" : -440,
+        "y" : -200,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "combined_taxi_data",
+          "sourceType" : "Source",
+          "sourceName" : "tom.ny_taxi",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SPPhznhyfd7_c39mp4nCT",
+          "schema" : {
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "VendorID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "pickup_datetime",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "dropoff_datetime",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "passenger_count",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "trip_distance",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "RatecodeID",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "store_and_fwd_flag",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PULocationID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "DOLocationID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "payment_type",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "fare_amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "extra",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "mta_tax",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "tip_amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "tolls_amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "improvement_surcharge",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "total_amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "congestion_surcharge",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "taxi_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "year",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "month",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "pickup_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "dropoff_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "UD0KtLa3yyYOr-piqhtEA" : {
+      "id" : "UD0KtLa3yyYOr-piqhtEA",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "do_zones",
+        "slug" : "do_zones",
+        "x" : -280,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "zones",
+          "sourceType" : "Source",
+          "sourceName" : "tom.ny_taxi",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "24Qix9yaNQos78ewbZDt0",
+          "schema" : {
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "LocationID",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Borough",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Zone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "service_zone",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "UVEUkd7zO7EBPbnnq3yNz$$YIRkb52ovx1r60Y-HaSYw",
+    "source" : "FrmlOZ5i-L69choLKSDGb",
+    "sourcePort" : "D3FosJ5slLA87xijEBmiX",
+    "target" : "PxMPUduLhP1q6CU_fW261$$9dTx2eBL1jFUPqSFusswH",
+    "targetPort" : "WN6nh5pieSnPMDKM5usWd$$johZxv-RM0enNSBRYpc9G"
+  }, {
+    "id" : "k1p14XvCqimbj-k2s7O5R$$qJyZG7vmn7Kt3ADzx2WVa",
+    "source" : "Rhg6Wsz3Mk2pvcuS9xcCH",
+    "sourcePort" : "SPPhznhyfd7_c39mp4nCT",
+    "target" : "PxMPUduLhP1q6CU_fW261$$9dTx2eBL1jFUPqSFusswH",
+    "targetPort" : "c4tNd_NBPsn10KUVCqWdY$$O_ZgU3j0zZ0dquO7abnv8"
+  }, {
+    "id" : "Nh31p5fB1xr6Cn1XF0OWF$$d5_aVA-FE2xYR0116z4I9",
+    "source" : "PxMPUduLhP1q6CU_fW261$$9dTx2eBL1jFUPqSFusswH",
+    "sourcePort" : "Ncrc4S_6RaMST5d0h1T-G$$eu_-D5yfqi-WBKa0rhTNp",
+    "target" : "Qf6BuQASHy380lKiy5yq9$$m3xvH0uN8i7Wi2Lx1e-tP",
+    "targetPort" : "ryMexHEGH_BymNc9rFLy6$$FQt6-OQfzJE1ApfX435_Z"
+  }, {
+    "id" : "4LNkp0nLIFwl0tmJXOi9r$$t69YQ9qck2X74bIIyMp4r",
+    "source" : "UD0KtLa3yyYOr-piqhtEA",
+    "sourcePort" : "24Qix9yaNQos78ewbZDt0",
+    "target" : "Qf6BuQASHy380lKiy5yq9$$m3xvH0uN8i7Wi2Lx1e-tP",
+    "targetPort" : "9wzIoLb1zw88PcCgFjc4A$$QsC0LUgOg8yINdMtzl1kq"
+  }, {
+    "id" : "FZo87yTdr4NQmjwA1pGpS$$7Sn7md-VB7EXA-_yIF0wj",
+    "source" : "Qf6BuQASHy380lKiy5yq9$$m3xvH0uN8i7Wi2Lx1e-tP",
+    "sourcePort" : "5IHzassn3OZvcrcNyL7Em$$DHZe3CQ-x3Yz4tWT56HmG",
+    "target" : "ny_taxi_zones##sxq0UpxO",
+    "targetPort" : "BBQaw2vc"
+  } ],
+  "component" : "Model"
+}
