@@ -22,12 +22,329 @@ functions:
   expressions: {}
   airflowFunctions: {}
 subgraphs: {}
-sqlModels: {}
+sqlModels:
+  .prophecy/metadata/sqlmodels/pickup_location_analysis:
+    name: pickup_location_analysis
+    schema:
+      providerType: Databricks
+      fields:
+      - name: pickup_date
+        dataType:
+          type: Date
+      - name: PUBorough
+        dataType:
+          type: String
+      - name: rides
+        dataType:
+          type: Bigint
+    description: null
+    author: tom@prophecy.io
+    files:
+    - models/pickup_location_analysis.sql
+    - .prophecy/ide/models/pickup_location_analysis.json
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-06-05 21:58:34'
+  .prophecy/metadata/sqlmodels/borough_pair_analysis:
+    name: borough_pair_analysis
+    schema:
+      providerType: Databricks
+      fields:
+      - name: PUBorough
+        dataType:
+          type: String
+      - name: DOBorough
+        dataType:
+          type: String
+      - name: avg_time
+        dataType:
+          type: Double
+      - name: avg_distance
+        dataType:
+          type: Double
+      - name: avg_speed
+        dataType:
+          type: Double
+    description: null
+    author: tom@prophecy.io
+    files:
+    - models/borough_pair_analysis.sql
+    - .prophecy/ide/models/borough_pair_analysis.json
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-06-06 02:22:17'
+  .prophecy/metadata/sqlmodels/dropoff_location_analysis:
+    name: dropoff_location_analysis
+    schema:
+      providerType: Databricks
+      fields:
+      - name: dropoff_date
+        dataType:
+          type: Date
+      - name: DOBorough
+        dataType:
+          type: String
+      - name: Rides
+        dataType:
+          type: Bigint
+    description: null
+    author: tom@prophecy.io
+    files:
+    - models/dropoff_location_analysis.sql
+    - .prophecy/ide/models/dropoff_location_analysis.json
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-06-06 00:59:28'
+  .prophecy/metadata/sqlmodels/ny_taxi_zones:
+    name: ny_taxi_zones
+    schema:
+      providerType: Databricks
+      fields:
+      - name: VendorID
+        dataType:
+          type: Integer
+      - name: pickup_datetime
+        dataType:
+          type: Timestamp
+      - name: dropoff_datetime
+        dataType:
+          type: Timestamp
+      - name: passenger_count
+        dataType:
+          type: Bigint
+      - name: trip_distance
+        dataType:
+          type: Float
+      - name: RatecodeID
+        dataType:
+          type: Bigint
+      - name: store_and_fwd_flag
+        dataType:
+          type: String
+      - name: PULocationID
+        dataType:
+          type: Integer
+      - name: PUBorough
+        dataType:
+          type: String
+      - name: PUZone
+        dataType:
+          type: String
+      - name: PUservice_zone
+        dataType:
+          type: String
+      - name: DOLocationID
+        dataType:
+          type: Integer
+      - name: DOBorough
+        dataType:
+          type: String
+      - name: DOZone
+        dataType:
+          type: String
+      - name: DOservice_zone
+        dataType:
+          type: String
+      - name: payment_type
+        dataType:
+          type: Bigint
+      - name: fare_amount
+        dataType:
+          type: Float
+      - name: extra
+        dataType:
+          type: Float
+      - name: mta_tax
+        dataType:
+          type: Float
+      - name: tip_amount
+        dataType:
+          type: Float
+      - name: tolls_amount
+        dataType:
+          type: Float
+      - name: improvement_surcharge
+        dataType:
+          type: Float
+      - name: total_amount
+        dataType:
+          type: Float
+      - name: congestion_surcharge
+        dataType:
+          type: Float
+      - name: taxi_type
+        dataType:
+          type: String
+      - name: year
+        dataType:
+          type: String
+      - name: month
+        dataType:
+          type: String
+      - name: pickup_date
+        dataType:
+          type: Date
+      - name: dropoff_date
+        dataType:
+          type: Date
+    description: null
+    author: tom@prophecy.io
+    files:
+    - models/ny_taxi_zones.sql
+    - .prophecy/ide/models/ny_taxi_zones.json
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-06-05 14:59:08'
+  .prophecy/metadata/sqlmodels/manhattan_fare_analysis:
+    name: manhattan_fare_analysis
+    schema:
+      providerType: Databricks
+      fields:
+      - name: DOBorough
+        dataType:
+          type: String
+      - name: rides
+        dataType:
+          type: Bigint
+      - name: avg_total_amount
+        dataType:
+          type: Double
+    description: null
+    author: tom@prophecy.io
+    files:
+    - models/manhattan_fare_analysis.sql
+    - .prophecy/ide/models/manhattan_fare_analysis.json
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-06-05 20:54:18'
 sqlSnapshots: {}
 sqlTests: {}
 sqlMacros: {}
 sqlSeeds: {}
-sqlSources: {}
+sqlSources:
+  .prophecy/metadata/sqlsources/tom_ny_taxi:
+    name: tom.ny_taxi
+    description: null
+    author: tom@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2024-06-05 14:45:48'
+    tables:
+    - name: combined_taxi_data
+      schema:
+        providerType: databricks
+        fields:
+        - name: VendorID
+          dataType:
+            type: Integer
+        - name: pickup_datetime
+          dataType:
+            type: Timestamp
+        - name: dropoff_datetime
+          dataType:
+            type: Timestamp
+        - name: passenger_count
+          dataType:
+            type: Bigint
+        - name: trip_distance
+          dataType:
+            type: Double
+        - name: RatecodeID
+          dataType:
+            type: Bigint
+        - name: store_and_fwd_flag
+          dataType:
+            type: String
+        - name: PULocationID
+          dataType:
+            type: Integer
+        - name: DOLocationID
+          dataType:
+            type: Integer
+        - name: payment_type
+          dataType:
+            type: Bigint
+        - name: fare_amount
+          dataType:
+            type: Double
+        - name: extra
+          dataType:
+            type: Double
+        - name: mta_tax
+          dataType:
+            type: Double
+        - name: tip_amount
+          dataType:
+            type: Double
+        - name: tolls_amount
+          dataType:
+            type: Double
+        - name: improvement_surcharge
+          dataType:
+            type: Double
+        - name: total_amount
+          dataType:
+            type: Double
+        - name: congestion_surcharge
+          dataType:
+            type: Double
+        - name: taxi_type
+          dataType:
+            type: String
+        - name: year
+          dataType:
+            type: String
+        - name: month
+          dataType:
+            type: String
+        - name: pickup_date
+          dataType:
+            type: Date
+        - name: dropoff_date
+          dataType:
+            type: Date
+      description: null
+      author: tom@prophecy.io
+      createdAt: '2024-06-05 14:45:48'
+    - name: zones
+      schema:
+        providerType: databricks
+        fields:
+        - name: LocationID
+          dataType:
+            type: Double
+        - name: Borough
+          dataType:
+            type: String
+        - name: Zone
+          dataType:
+            type: String
+        - name: service_zone
+          dataType:
+            type: String
+      description: null
+      author: tom@prophecy.io
+      createdAt: '2024-06-05 14:47:05'
 sqlUnreferencedSources: {}
 sqlPipeline:
   name: sqlPipeline
