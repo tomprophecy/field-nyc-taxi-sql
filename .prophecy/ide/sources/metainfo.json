@@ -202,7 +202,420 @@
       }, {
         "type" : "Schema",
         "name" : "ny_taxi",
-        "children" : [ ]
+        "tables" : {
+          "combined_taxi_data" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "VendorID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "pickup_datetime",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "dropoff_datetime",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "passenger_count",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "trip_distance",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "RatecodeID",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "store_and_fwd_flag",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PULocationID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "DOLocationID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "payment_type",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "fare_amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "extra",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "mta_tax",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "tip_amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "tolls_amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "improvement_surcharge",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "total_amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "congestion_surcharge",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "taxi_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "year",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "month",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "pickup_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "dropoff_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            } ]
+          },
+          "weather_data_precipitation" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "json_content_latitude",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "json_content_longitude",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "metrics_time",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "metrics_precipitation_sum",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "year",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "month",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "pickup_location_analysis" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "pickup_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "PUBorough",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "rides",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            } ]
+          },
+          "dropoff_location_analysis" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "dropoff_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "DOBorough",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Rides",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            } ]
+          },
+          "ny_taxi_zones" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "VendorID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "pickup_datetime",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "dropoff_datetime",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "passenger_count",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "trip_distance",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "RatecodeID",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "store_and_fwd_flag",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PULocationID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "PUBorough",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PUZone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PUservice_zone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DOLocationID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "DOBorough",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DOZone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DOservice_zone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "payment_type",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "fare_amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "extra",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "mta_tax",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "tip_amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "tolls_amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "improvement_surcharge",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "total_amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "congestion_surcharge",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "taxi_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "year",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "month",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "pickup_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "dropoff_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            } ]
+          },
+          "manhattan_fare_analysis" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "DOBorough",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "rides",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "avg_total_amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          },
+          "zones" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "LocationID",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "Borough",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Zone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "service_zone",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "borough_pair_analysis" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "PUBorough",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DOBorough",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "avg_time",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "avg_distance",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "avg_speed",
+              "dataType" : {
+                "type" : "Double"
+              }
+            } ]
+          }
+        }
       } ]
     } ]
   },
@@ -210,6 +623,26 @@
     "dependencies" : { },
     "prophecyProjectDependencies" : { }
   },
-  "sourcesToSync" : [ ],
+  "entitiesToSync" : [ {
+    "name" : "borough_pair_analysis",
+    "type" : "Model",
+    "syncedOnce" : false
+  }, {
+    "name" : "dropoff_location_analysis",
+    "type" : "Model",
+    "syncedOnce" : false
+  }, {
+    "name" : "manhattan_fare_analysis",
+    "type" : "Model",
+    "syncedOnce" : false
+  }, {
+    "name" : "ny_taxi_zones",
+    "type" : "Model",
+    "syncedOnce" : false
+  }, {
+    "name" : "pickup_location_analysis",
+    "type" : "Model",
+    "syncedOnce" : false
+  } ],
   "frontEndLanguage" : "sql"
 }

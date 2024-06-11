@@ -46,6 +46,14 @@ avg_ride_details_by_boroughs AS (
   GROUP BY 
     PUBorough, DOBorough
 
+),
+
+ny_taxi_zones_1 AS (
+
+  SELECT * 
+  
+  FROM {{ source('tom.ny_taxi', 'ny_taxi_zones') }}
+
 )
 
 SELECT *

@@ -5,7 +5,1445 @@
     "autoLayout" : false,
     "staleState" : "none",
     "sourceSuggestions" : {
-      "sources" : [ ]
+      "sources" : [ {
+        "source" : {
+          "table" : {
+            "name" : "borough_pair_analysis",
+            "sourceName" : "tom.ny_taxi",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "borough_pair_analysis_1",
+        "canJoinWith" : [ {
+          "processLabel" : "ny_taxi_zones_1",
+          "processId" : "v6ywVFqwZR2WVBuR4EnUc",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "DOBorough", "PUBorough" ],
+            "conditions" : [ {
+              "alias" : "borough_pair_analysis_1",
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOBorough = borough_pair_analysis_1.DOBorough AND ny_taxi_zones_1.PUBorough = borough_pair_analysis_1.PUBorough"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "borough_pair_analysis_1.avg_time"
+              },
+              "alias" : "avg_time"
+            }, {
+              "expression" : {
+                "expression" : "borough_pair_analysis_1.avg_distance"
+              },
+              "alias" : "avg_distance"
+            }, {
+              "expression" : {
+                "expression" : "borough_pair_analysis_1.avg_speed"
+              },
+              "alias" : "avg_speed"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.store_and_fwd_flag"
+              },
+              "alias" : "store_and_fwd_flag"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.PULocationID"
+              },
+              "alias" : "PULocationID"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.mta_tax"
+              },
+              "alias" : "mta_tax"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.pickup_date"
+              },
+              "alias" : "pickup_date"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOZone"
+              },
+              "alias" : "DOZone"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.improvement_surcharge"
+              },
+              "alias" : "improvement_surcharge"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.taxi_type"
+              },
+              "alias" : "taxi_type"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.passenger_count"
+              },
+              "alias" : "passenger_count"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.total_amount"
+              },
+              "alias" : "total_amount"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.trip_distance"
+              },
+              "alias" : "trip_distance"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.tolls_amount"
+              },
+              "alias" : "tolls_amount"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.dropoff_datetime"
+              },
+              "alias" : "dropoff_datetime"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.year"
+              },
+              "alias" : "year"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.PUZone"
+              },
+              "alias" : "PUZone"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.congestion_surcharge"
+              },
+              "alias" : "congestion_surcharge"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.tip_amount"
+              },
+              "alias" : "tip_amount"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOBorough"
+              },
+              "alias" : "DOBorough"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.month"
+              },
+              "alias" : "month"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOservice_zone"
+              },
+              "alias" : "DOservice_zone"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.pickup_datetime"
+              },
+              "alias" : "pickup_datetime"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOLocationID"
+              },
+              "alias" : "DOLocationID"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.PUBorough"
+              },
+              "alias" : "PUBorough"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.fare_amount"
+              },
+              "alias" : "fare_amount"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.payment_type"
+              },
+              "alias" : "payment_type"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.PUservice_zone"
+              },
+              "alias" : "PUservice_zone"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.RatecodeID"
+              },
+              "alias" : "RatecodeID"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.VendorID"
+              },
+              "alias" : "VendorID"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.dropoff_date"
+              },
+              "alias" : "dropoff_date"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.extra"
+              },
+              "alias" : "extra"
+            } ],
+            "headAlias" : "borough_pair_analysis_1",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "DOBorough", "PUBorough" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "combined_taxi_data",
+            "sourceName" : "tom.ny_taxi",
+            "sourceType" : "Source"
+          }
+        },
+        "sourceComponentKind" : "Source",
+        "sourceLabel" : "combined_taxi_data",
+        "canJoinWith" : [ {
+          "processLabel" : "ny_taxi_zones_1",
+          "processId" : "v6ywVFqwZR2WVBuR4EnUc",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "DOLocationID", "PULocationID", "RatecodeID" ],
+            "conditions" : [ {
+              "alias" : "combined_taxi_data",
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOLocationID = combined_taxi_data.DOLocationID AND ny_taxi_zones_1.PULocationID = combined_taxi_data.PULocationID AND ny_taxi_zones_1.RatecodeID = combined_taxi_data.RatecodeID"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.store_and_fwd_flag"
+              },
+              "alias" : "store_and_fwd_flag"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.PULocationID"
+              },
+              "alias" : "PULocationID"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.mta_tax"
+              },
+              "alias" : "mta_tax"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.pickup_date"
+              },
+              "alias" : "pickup_date"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOZone"
+              },
+              "alias" : "DOZone"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.improvement_surcharge"
+              },
+              "alias" : "improvement_surcharge"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.taxi_type"
+              },
+              "alias" : "taxi_type"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.passenger_count"
+              },
+              "alias" : "passenger_count"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.total_amount"
+              },
+              "alias" : "total_amount"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.trip_distance"
+              },
+              "alias" : "trip_distance"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.tolls_amount"
+              },
+              "alias" : "tolls_amount"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.dropoff_datetime"
+              },
+              "alias" : "dropoff_datetime"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.year"
+              },
+              "alias" : "year"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.PUZone"
+              },
+              "alias" : "PUZone"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.congestion_surcharge"
+              },
+              "alias" : "congestion_surcharge"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.tip_amount"
+              },
+              "alias" : "tip_amount"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOBorough"
+              },
+              "alias" : "DOBorough"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.month"
+              },
+              "alias" : "month"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOservice_zone"
+              },
+              "alias" : "DOservice_zone"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.pickup_datetime"
+              },
+              "alias" : "pickup_datetime"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOLocationID"
+              },
+              "alias" : "DOLocationID"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.PUBorough"
+              },
+              "alias" : "PUBorough"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.fare_amount"
+              },
+              "alias" : "fare_amount"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.payment_type"
+              },
+              "alias" : "payment_type"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.PUservice_zone"
+              },
+              "alias" : "PUservice_zone"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.RatecodeID"
+              },
+              "alias" : "RatecodeID"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.VendorID"
+              },
+              "alias" : "VendorID"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.dropoff_date"
+              },
+              "alias" : "dropoff_date"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.extra"
+              },
+              "alias" : "extra"
+            } ],
+            "headAlias" : "combined_taxi_data",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "DOLocationID", "PULocationID", "RatecodeID" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "dropoff_location_analysis",
+            "sourceType" : "Model"
+          }
+        },
+        "sourceComponentKind" : "Model",
+        "sourceLabel" : "dropoff_location_analysis",
+        "canJoinWith" : [ {
+          "processLabel" : "ny_taxi_zones_1",
+          "processId" : "v6ywVFqwZR2WVBuR4EnUc",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "DOBorough", "dropoff_date" ],
+            "conditions" : [ {
+              "alias" : "dropoff_location_analysis",
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOBorough = dropoff_location_analysis.DOBorough AND ny_taxi_zones_1.dropoff_date = dropoff_location_analysis.dropoff_date"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "dropoff_location_analysis.Rides"
+              },
+              "alias" : "Rides"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.store_and_fwd_flag"
+              },
+              "alias" : "store_and_fwd_flag"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.PULocationID"
+              },
+              "alias" : "PULocationID"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.mta_tax"
+              },
+              "alias" : "mta_tax"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.pickup_date"
+              },
+              "alias" : "pickup_date"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOZone"
+              },
+              "alias" : "DOZone"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.improvement_surcharge"
+              },
+              "alias" : "improvement_surcharge"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.taxi_type"
+              },
+              "alias" : "taxi_type"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.passenger_count"
+              },
+              "alias" : "passenger_count"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.total_amount"
+              },
+              "alias" : "total_amount"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.trip_distance"
+              },
+              "alias" : "trip_distance"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.tolls_amount"
+              },
+              "alias" : "tolls_amount"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.dropoff_datetime"
+              },
+              "alias" : "dropoff_datetime"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.year"
+              },
+              "alias" : "year"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.PUZone"
+              },
+              "alias" : "PUZone"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.congestion_surcharge"
+              },
+              "alias" : "congestion_surcharge"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.tip_amount"
+              },
+              "alias" : "tip_amount"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOBorough"
+              },
+              "alias" : "DOBorough"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.month"
+              },
+              "alias" : "month"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOservice_zone"
+              },
+              "alias" : "DOservice_zone"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.pickup_datetime"
+              },
+              "alias" : "pickup_datetime"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOLocationID"
+              },
+              "alias" : "DOLocationID"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.PUBorough"
+              },
+              "alias" : "PUBorough"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.fare_amount"
+              },
+              "alias" : "fare_amount"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.payment_type"
+              },
+              "alias" : "payment_type"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.PUservice_zone"
+              },
+              "alias" : "PUservice_zone"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.RatecodeID"
+              },
+              "alias" : "RatecodeID"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.VendorID"
+              },
+              "alias" : "VendorID"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.dropoff_date"
+              },
+              "alias" : "dropoff_date"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.extra"
+              },
+              "alias" : "extra"
+            } ],
+            "headAlias" : "dropoff_location_analysis",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "DOBorough", "dropoff_date" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "pickup_location_analysis",
+            "sourceType" : "Model"
+          }
+        },
+        "sourceComponentKind" : "Model",
+        "sourceLabel" : "pickup_location_analysis",
+        "canJoinWith" : [ {
+          "processLabel" : "ny_taxi_zones_1",
+          "processId" : "v6ywVFqwZR2WVBuR4EnUc",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "PUBorough", "pickup_date" ],
+            "conditions" : [ {
+              "alias" : "pickup_location_analysis",
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.PUBorough = pickup_location_analysis.PUBorough AND ny_taxi_zones_1.pickup_date = pickup_location_analysis.pickup_date"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "pickup_location_analysis.rides"
+              },
+              "alias" : "rides"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.store_and_fwd_flag"
+              },
+              "alias" : "store_and_fwd_flag"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.PULocationID"
+              },
+              "alias" : "PULocationID"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.mta_tax"
+              },
+              "alias" : "mta_tax"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.pickup_date"
+              },
+              "alias" : "pickup_date"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOZone"
+              },
+              "alias" : "DOZone"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.improvement_surcharge"
+              },
+              "alias" : "improvement_surcharge"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.taxi_type"
+              },
+              "alias" : "taxi_type"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.passenger_count"
+              },
+              "alias" : "passenger_count"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.total_amount"
+              },
+              "alias" : "total_amount"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.trip_distance"
+              },
+              "alias" : "trip_distance"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.tolls_amount"
+              },
+              "alias" : "tolls_amount"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.dropoff_datetime"
+              },
+              "alias" : "dropoff_datetime"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.year"
+              },
+              "alias" : "year"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.PUZone"
+              },
+              "alias" : "PUZone"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.congestion_surcharge"
+              },
+              "alias" : "congestion_surcharge"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.tip_amount"
+              },
+              "alias" : "tip_amount"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOBorough"
+              },
+              "alias" : "DOBorough"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.month"
+              },
+              "alias" : "month"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOservice_zone"
+              },
+              "alias" : "DOservice_zone"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.pickup_datetime"
+              },
+              "alias" : "pickup_datetime"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOLocationID"
+              },
+              "alias" : "DOLocationID"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.PUBorough"
+              },
+              "alias" : "PUBorough"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.fare_amount"
+              },
+              "alias" : "fare_amount"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.payment_type"
+              },
+              "alias" : "payment_type"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.PUservice_zone"
+              },
+              "alias" : "PUservice_zone"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.RatecodeID"
+              },
+              "alias" : "RatecodeID"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.VendorID"
+              },
+              "alias" : "VendorID"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.dropoff_date"
+              },
+              "alias" : "dropoff_date"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.extra"
+              },
+              "alias" : "extra"
+            } ],
+            "headAlias" : "pickup_location_analysis",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "PUBorough", "pickup_date" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "pickup_location_analysis",
+            "sourceName" : "tom.ny_taxi",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "pickup_location_analysis",
+        "canJoinWith" : [ {
+          "processLabel" : "ny_taxi_zones_1",
+          "processId" : "v6ywVFqwZR2WVBuR4EnUc",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "PUBorough", "pickup_date" ],
+            "conditions" : [ {
+              "alias" : "pickup_location_analysis",
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.PUBorough = pickup_location_analysis.PUBorough AND ny_taxi_zones_1.pickup_date = pickup_location_analysis.pickup_date"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "pickup_location_analysis.rides"
+              },
+              "alias" : "rides"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.store_and_fwd_flag"
+              },
+              "alias" : "store_and_fwd_flag"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.PULocationID"
+              },
+              "alias" : "PULocationID"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.mta_tax"
+              },
+              "alias" : "mta_tax"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.pickup_date"
+              },
+              "alias" : "pickup_date"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOZone"
+              },
+              "alias" : "DOZone"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.improvement_surcharge"
+              },
+              "alias" : "improvement_surcharge"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.taxi_type"
+              },
+              "alias" : "taxi_type"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.passenger_count"
+              },
+              "alias" : "passenger_count"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.total_amount"
+              },
+              "alias" : "total_amount"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.trip_distance"
+              },
+              "alias" : "trip_distance"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.tolls_amount"
+              },
+              "alias" : "tolls_amount"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.dropoff_datetime"
+              },
+              "alias" : "dropoff_datetime"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.year"
+              },
+              "alias" : "year"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.PUZone"
+              },
+              "alias" : "PUZone"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.congestion_surcharge"
+              },
+              "alias" : "congestion_surcharge"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.tip_amount"
+              },
+              "alias" : "tip_amount"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOBorough"
+              },
+              "alias" : "DOBorough"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.month"
+              },
+              "alias" : "month"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOservice_zone"
+              },
+              "alias" : "DOservice_zone"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.pickup_datetime"
+              },
+              "alias" : "pickup_datetime"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOLocationID"
+              },
+              "alias" : "DOLocationID"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.PUBorough"
+              },
+              "alias" : "PUBorough"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.fare_amount"
+              },
+              "alias" : "fare_amount"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.payment_type"
+              },
+              "alias" : "payment_type"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.PUservice_zone"
+              },
+              "alias" : "PUservice_zone"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.RatecodeID"
+              },
+              "alias" : "RatecodeID"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.VendorID"
+              },
+              "alias" : "VendorID"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.dropoff_date"
+              },
+              "alias" : "dropoff_date"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.extra"
+              },
+              "alias" : "extra"
+            } ],
+            "headAlias" : "pickup_location_analysis",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "PUBorough", "pickup_date" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "dropoff_location_analysis",
+            "sourceName" : "tom.ny_taxi",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "dropoff_location_analysis",
+        "canJoinWith" : [ {
+          "processLabel" : "ny_taxi_zones_1",
+          "processId" : "v6ywVFqwZR2WVBuR4EnUc",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "DOBorough", "dropoff_date" ],
+            "conditions" : [ {
+              "alias" : "dropoff_location_analysis",
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOBorough = dropoff_location_analysis.DOBorough AND ny_taxi_zones_1.dropoff_date = dropoff_location_analysis.dropoff_date"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "dropoff_location_analysis.Rides"
+              },
+              "alias" : "Rides"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.store_and_fwd_flag"
+              },
+              "alias" : "store_and_fwd_flag"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.PULocationID"
+              },
+              "alias" : "PULocationID"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.mta_tax"
+              },
+              "alias" : "mta_tax"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.pickup_date"
+              },
+              "alias" : "pickup_date"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOZone"
+              },
+              "alias" : "DOZone"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.improvement_surcharge"
+              },
+              "alias" : "improvement_surcharge"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.taxi_type"
+              },
+              "alias" : "taxi_type"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.passenger_count"
+              },
+              "alias" : "passenger_count"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.total_amount"
+              },
+              "alias" : "total_amount"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.trip_distance"
+              },
+              "alias" : "trip_distance"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.tolls_amount"
+              },
+              "alias" : "tolls_amount"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.dropoff_datetime"
+              },
+              "alias" : "dropoff_datetime"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.year"
+              },
+              "alias" : "year"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.PUZone"
+              },
+              "alias" : "PUZone"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.congestion_surcharge"
+              },
+              "alias" : "congestion_surcharge"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.tip_amount"
+              },
+              "alias" : "tip_amount"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOBorough"
+              },
+              "alias" : "DOBorough"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.month"
+              },
+              "alias" : "month"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOservice_zone"
+              },
+              "alias" : "DOservice_zone"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.pickup_datetime"
+              },
+              "alias" : "pickup_datetime"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOLocationID"
+              },
+              "alias" : "DOLocationID"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.PUBorough"
+              },
+              "alias" : "PUBorough"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.fare_amount"
+              },
+              "alias" : "fare_amount"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.payment_type"
+              },
+              "alias" : "payment_type"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.PUservice_zone"
+              },
+              "alias" : "PUservice_zone"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.RatecodeID"
+              },
+              "alias" : "RatecodeID"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.VendorID"
+              },
+              "alias" : "VendorID"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.dropoff_date"
+              },
+              "alias" : "dropoff_date"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.extra"
+              },
+              "alias" : "extra"
+            } ],
+            "headAlias" : "dropoff_location_analysis",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "DOBorough", "dropoff_date" ],
+          "isRecommended" : false
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "manhattan_fare_analysis",
+            "sourceName" : "tom.ny_taxi",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "manhattan_fare_analysis",
+        "canJoinWith" : [ {
+          "processLabel" : "ny_taxi_zones_1",
+          "processId" : "v6ywVFqwZR2WVBuR4EnUc",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "DOBorough", "total_amount" ],
+            "conditions" : [ {
+              "alias" : "manhattan_fare_analysis",
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOBorough = manhattan_fare_analysis.DOBorough AND ny_taxi_zones_1.total_amount = manhattan_fare_analysis.avg_total_amount"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "manhattan_fare_analysis.rides"
+              },
+              "alias" : "rides"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.store_and_fwd_flag"
+              },
+              "alias" : "store_and_fwd_flag"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.PULocationID"
+              },
+              "alias" : "PULocationID"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.mta_tax"
+              },
+              "alias" : "mta_tax"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.pickup_date"
+              },
+              "alias" : "pickup_date"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOZone"
+              },
+              "alias" : "DOZone"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.improvement_surcharge"
+              },
+              "alias" : "improvement_surcharge"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.taxi_type"
+              },
+              "alias" : "taxi_type"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.passenger_count"
+              },
+              "alias" : "passenger_count"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.total_amount"
+              },
+              "alias" : "total_amount"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.trip_distance"
+              },
+              "alias" : "trip_distance"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.tolls_amount"
+              },
+              "alias" : "tolls_amount"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.dropoff_datetime"
+              },
+              "alias" : "dropoff_datetime"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.year"
+              },
+              "alias" : "year"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.PUZone"
+              },
+              "alias" : "PUZone"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.congestion_surcharge"
+              },
+              "alias" : "congestion_surcharge"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.tip_amount"
+              },
+              "alias" : "tip_amount"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOBorough"
+              },
+              "alias" : "DOBorough"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.month"
+              },
+              "alias" : "month"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOservice_zone"
+              },
+              "alias" : "DOservice_zone"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.pickup_datetime"
+              },
+              "alias" : "pickup_datetime"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOLocationID"
+              },
+              "alias" : "DOLocationID"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.PUBorough"
+              },
+              "alias" : "PUBorough"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.fare_amount"
+              },
+              "alias" : "fare_amount"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.payment_type"
+              },
+              "alias" : "payment_type"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.PUservice_zone"
+              },
+              "alias" : "PUservice_zone"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.RatecodeID"
+              },
+              "alias" : "RatecodeID"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.VendorID"
+              },
+              "alias" : "VendorID"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.dropoff_date"
+              },
+              "alias" : "dropoff_date"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.extra"
+              },
+              "alias" : "extra"
+            } ],
+            "headAlias" : "manhattan_fare_analysis",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "DOBorough", "total_amount" ],
+          "isRecommended" : false
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "ny_taxi_zones",
+            "sourceName" : "tom.default",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "ny_taxi_zones_2",
+        "canJoinWith" : [ {
+          "processLabel" : "ny_taxi_zones_1",
+          "processId" : "v6ywVFqwZR2WVBuR4EnUc",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "DOBorough", "DOLocationID", "DOZone" ],
+            "conditions" : [ {
+              "alias" : "ny_taxi_zones_2",
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOBorough = ny_taxi_zones_2.DOBorough AND ny_taxi_zones_1.DOLocationID = ny_taxi_zones_2.DOLocationID AND ny_taxi_zones_1.DOZone = ny_taxi_zones_2.DOZone"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.store_and_fwd_flag"
+              },
+              "alias" : "store_and_fwd_flag"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.PULocationID"
+              },
+              "alias" : "PULocationID"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.mta_tax"
+              },
+              "alias" : "mta_tax"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.pickup_date"
+              },
+              "alias" : "pickup_date"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOZone"
+              },
+              "alias" : "DOZone"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.improvement_surcharge"
+              },
+              "alias" : "improvement_surcharge"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.taxi_type"
+              },
+              "alias" : "taxi_type"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.passenger_count"
+              },
+              "alias" : "passenger_count"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.total_amount"
+              },
+              "alias" : "total_amount"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.trip_distance"
+              },
+              "alias" : "trip_distance"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.tolls_amount"
+              },
+              "alias" : "tolls_amount"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.dropoff_datetime"
+              },
+              "alias" : "dropoff_datetime"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.year"
+              },
+              "alias" : "year"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.PUZone"
+              },
+              "alias" : "PUZone"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.congestion_surcharge"
+              },
+              "alias" : "congestion_surcharge"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.tip_amount"
+              },
+              "alias" : "tip_amount"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOBorough"
+              },
+              "alias" : "DOBorough"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.month"
+              },
+              "alias" : "month"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOservice_zone"
+              },
+              "alias" : "DOservice_zone"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.pickup_datetime"
+              },
+              "alias" : "pickup_datetime"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.DOLocationID"
+              },
+              "alias" : "DOLocationID"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.PUBorough"
+              },
+              "alias" : "PUBorough"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.fare_amount"
+              },
+              "alias" : "fare_amount"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.payment_type"
+              },
+              "alias" : "payment_type"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.PUservice_zone"
+              },
+              "alias" : "PUservice_zone"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.RatecodeID"
+              },
+              "alias" : "RatecodeID"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.VendorID"
+              },
+              "alias" : "VendorID"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.dropoff_date"
+              },
+              "alias" : "dropoff_date"
+            }, {
+              "expression" : {
+                "expression" : "ny_taxi_zones_1.extra"
+              },
+              "alias" : "extra"
+            } ],
+            "headAlias" : "ny_taxi_zones_2",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "DOBorough", "DOLocationID", "DOZone" ],
+          "isRecommended" : false
+        } ]
+      } ]
     },
     "version" : 3
   },
@@ -782,6 +2220,184 @@
               "name" : "avg_speed",
               "dataType" : {
                 "type" : "Double"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "v6ywVFqwZR2WVBuR4EnUc" : {
+      "id" : "v6ywVFqwZR2WVBuR4EnUc",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "ny_taxi_zones_1",
+        "slug" : "ny_taxi_zones_1",
+        "x" : -419,
+        "y" : -240.5761260986328,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "ny_taxi_zones",
+          "sourceType" : "Source",
+          "sourceName" : "tom.ny_taxi",
+          "alias" : "",
+          "additionalProperties" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "4nSWEaozNzTqBBu3DRIA0",
+          "schema" : {
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "VendorID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "pickup_datetime",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "dropoff_datetime",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "passenger_count",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "trip_distance",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "RatecodeID",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "store_and_fwd_flag",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PULocationID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "PUBorough",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PUZone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PUservice_zone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DOLocationID",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "DOBorough",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DOZone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DOservice_zone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "payment_type",
+              "dataType" : {
+                "type" : "Bigint"
+              }
+            }, {
+              "name" : "fare_amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "extra",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "mta_tax",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "tip_amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "tolls_amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "improvement_surcharge",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "total_amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "congestion_surcharge",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "taxi_type",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "year",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "month",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "pickup_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "dropoff_date",
+              "dataType" : {
+                "type" : "Date"
               }
             } ]
           },
