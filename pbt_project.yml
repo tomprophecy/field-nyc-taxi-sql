@@ -21,6 +21,7 @@ functions:
   udafs: {}
   expressions: {}
   airflowFunctions: {}
+  businessRules: {}
 subgraphs: {}
 sqlModels:
   .prophecy/metadata/sqlmodels/pickup_location_analysis:
@@ -253,95 +254,14 @@ sqlSources:
     - name: combined_taxi_data
       schema:
         providerType: databricks
-        fields:
-        - name: VendorID
-          dataType:
-            type: Integer
-        - name: pickup_datetime
-          dataType:
-            type: Timestamp
-        - name: dropoff_datetime
-          dataType:
-            type: Timestamp
-        - name: passenger_count
-          dataType:
-            type: Bigint
-        - name: trip_distance
-          dataType:
-            type: Double
-        - name: RatecodeID
-          dataType:
-            type: Bigint
-        - name: store_and_fwd_flag
-          dataType:
-            type: String
-        - name: PULocationID
-          dataType:
-            type: Integer
-        - name: DOLocationID
-          dataType:
-            type: Integer
-        - name: payment_type
-          dataType:
-            type: Bigint
-        - name: fare_amount
-          dataType:
-            type: Double
-        - name: extra
-          dataType:
-            type: Double
-        - name: mta_tax
-          dataType:
-            type: Double
-        - name: tip_amount
-          dataType:
-            type: Double
-        - name: tolls_amount
-          dataType:
-            type: Double
-        - name: improvement_surcharge
-          dataType:
-            type: Double
-        - name: total_amount
-          dataType:
-            type: Double
-        - name: congestion_surcharge
-          dataType:
-            type: Double
-        - name: taxi_type
-          dataType:
-            type: String
-        - name: year
-          dataType:
-            type: String
-        - name: month
-          dataType:
-            type: String
-        - name: pickup_date
-          dataType:
-            type: Date
-        - name: dropoff_date
-          dataType:
-            type: Date
+        fields: []
       description: null
       author: tom@prophecy.io
       createdAt: '2024-06-05 14:45:48'
     - name: zones
       schema:
         providerType: databricks
-        fields:
-        - name: LocationID
-          dataType:
-            type: Double
-        - name: Borough
-          dataType:
-            type: String
-        - name: Zone
-          dataType:
-            type: String
-        - name: service_zone
-          dataType:
-            type: String
+        fields: []
       description: null
       author: tom@prophecy.io
       createdAt: '2024-06-05 14:47:05'
